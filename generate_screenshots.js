@@ -399,3 +399,4 @@ fs.writeFileSync(path.join(outputDir, '12_terminal_test_suite_passed.svg'), term
 console.log('Generated: 12_terminal_test_suite_passed.svg');
 
 console.log(`\nAll 12 screenshots successfully saved to: ${outputDir}`);
+
