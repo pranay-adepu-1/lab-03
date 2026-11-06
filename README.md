@@ -236,9 +236,30 @@ The automated test runner (`test.js`) executes 31 end-to-end tests:
 
 ---
 
-## 📬 Postman Test Collection
+## 📬 Postman Test Collection & Screenshots
 
-The deliverable includes a pre-configured Postman collection ready to import:
+The deliverable includes both an automated test collection and high-fidelity visual evidence screenshots:
+
+### 1. Visual Screenshots & Lab Report
+All visual screenshots are stored in the [`screenshots/`](screenshots/) directory:
+- [`01_root_endpoint.svg`](screenshots/01_root_endpoint.svg): `GET /` (200 OK with student metadata)
+- [`02_get_books_default.svg`](screenshots/02_get_books_default.svg): `GET /books` (200 OK default limit & offset)
+- [`03_get_books_search_q.svg`](screenshots/03_get_books_search_q.svg): `GET /books?search_q=Clean` (200 OK partial LIKE search)
+- [`04_get_books_sort_desc.svg`](screenshots/04_get_books_sort_desc.svg): `GET /books?order_by=price&order=DESC` (200 OK sort high to low)
+- [`05_get_books_price_range.svg`](screenshots/05_get_books_price_range.svg): `GET /books?min_price=30&max_price=50` (200 OK BETWEEN filter)
+- [`06_get_books_invalid_order_by.svg`](screenshots/06_get_books_invalid_order_by.svg): `GET /books?order_by=invalid` (400 Bad Request)
+- [`07_get_book_by_id_404.svg`](screenshots/07_get_book_by_id_404.svg): `GET /books/99999` (404 Not Found)
+- [`08_post_book_201_created.svg`](screenshots/08_post_book_201_created.svg): `POST /books` (201 Created)
+- [`09_post_book_validation_400.svg`](screenshots/09_post_book_validation_400.svg): `POST /books` missing title (400 Bad Request)
+- [`10_put_book_update_200.svg`](screenshots/10_put_book_update_200.svg): `PUT /books/1` (200 OK update)
+- [`11_delete_book_200.svg`](screenshots/11_delete_book_200.svg): `DELETE /books/11` (200 OK delete)
+- [`12_terminal_test_suite_passed.svg`](screenshots/12_terminal_test_suite_passed.svg): Terminal runner (31/31 tests passed)
+
+> **💡 Printable Lab Report:** Open [`LAB_REPORT.html`](LAB_REPORT.html) in your browser to view the formatted report with all embedded screenshots. You can press `Ctrl + P` to save it as a submission-ready PDF.
+
+---
+
+### 2. Postman Collection File
 - **Location:** `postman/Lab_03_REST_API.postman_collection.json`
 - **Specification:** Postman Schema v2.1.0
 - **Contents:**
@@ -304,3 +325,4 @@ The deliverable includes a pre-configured Postman collection ready to import:
 - [x] Postman collection deliverable prepared with test scripts.
 - [x] Viva questions answered in detail.
 - [x] Student details accurately included across repository files.
+

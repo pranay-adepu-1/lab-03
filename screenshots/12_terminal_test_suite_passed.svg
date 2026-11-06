@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 584" width="850" height="584">
+  <rect width="850" height="584" rx="8" fill="#181818"/>
+  <rect width="850" height="40" rx="8" fill="#252526"/>
+  <rect y="35" width="850" height="5" fill="#252526"/>
+  <circle cx="20" cy="20" r="6" fill="#ff5f56"/>
+  <circle cx="38" cy="20" r="6" fill="#ffbd2e"/>
+  <circle cx="56" cy="20" r="6" fill="#27c93f"/>
+  <text x="80" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cccccc">PowerShell - npm test (Adepu Pranay Kumar - 252U1R1002)</text>
+  <text x="24" y="65" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#9cdcfe">Aurora University - Backend Development Fundamentals (Term II)</text>
+<text x="24" y="84" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#d4d4d4">Lab 3: REST API, query parameters, validation, debugging</text>
+<text x="24" y="103" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#9cdcfe">Student: Adepu Pranay Kumar | Reg: 252U1R1002 | Section: CSE-2A(S-15)</text>
+<text x="24" y="122" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#d4d4d4">Faculty: MR.sai shiva teja</text>
+<text x="24" y="141" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#555555">----------------------------------------------------------------------</text>
+<text x="24" y="160" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#d4d4d4">[Database] Initialized with 10 sample books.</text>
+<text x="24" y="179" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ec9b0">✔ PASS: GET / returns 200 OK with verified student metadata</text>
+<text x="24" y="198" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ec9b0">✔ PASS: GET /books returns 200 OK with default limit (10) and offset (0)</text>
+<text x="24" y="217" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ec9b0">✔ PASS: GET /books?search_q=Clean matches &quot;Clean Code&quot; correctly with LIKE</text>
+<text x="24" y="236" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ec9b0">✔ PASS: GET /books?order_by=price&amp;order=DESC sorts descending correctly</text>
+<text x="24" y="255" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ec9b0">✔ PASS: GET /books?order_by=price&amp;order=ASC sorts ascending correctly</text>
+<text x="24" y="274" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ec9b0">✔ PASS: GET /books?min_price=30&amp;max_price=50 filters books within range (BETWEEN)</text>
+<text x="24" y="293" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ec9b0">✔ PASS: GET /books?order_by=hacked_col returns 400 Bad Request</text>
+<text x="24" y="312" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ec9b0">✔ PASS: GET /books?min_price=100&amp;max_price=20 returns 400 (min &gt; max)</text>
+<text x="24" y="331" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ec9b0">✔ PASS: GET /books/1 returns 200 OK with book details</text>
+<text x="24" y="350" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ec9b0">✔ PASS: GET /books/99999 returns 404 Not Found with consistent { message }</text>
+<text x="24" y="369" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ec9b0">✔ PASS: POST /books returns 201 Created and newly created record</text>
+<text x="24" y="388" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ec9b0">✔ PASS: POST /books rejects missing title with 400 Bad Request</text>
+<text x="24" y="407" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ec9b0">✔ PASS: POST /books rejects non-numeric price with 400 Bad Request</text>
+<text x="24" y="426" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ec9b0">✔ PASS: PUT /books/1 returns 200 OK with updated record</text>
+<text x="24" y="445" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ec9b0">✔ PASS: PUT /books/99999 returns 404 Not Found for non-existent record</text>
+<text x="24" y="464" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ec9b0">✔ PASS: DELETE /books/1 returns 200 OK with success message</text>
+<text x="24" y="483" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ec9b0">✔ PASS: DELETE /books/99999 returns 404 Not Found for non-existent record</text>
+<text x="24" y="502" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ec9b0">✔ PASS: GET /api/undefined-endpoint returns 404 Not Found</text>
+<text x="24" y="521" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#555555">----------------------------------------------------------------------</text>
+<text x="24" y="540" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4ec9b0">Test Suite Results: Passed: 31 | Failed: 0 | Score: 100.0%</text>
+</svg>

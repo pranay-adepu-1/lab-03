@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 03 Report - Adepu Pranay Kumar (252U1R1002)</title>
+  <style>
+    :root {
+      --primary: #1a73e8;
+      --bg: #f8f9fa;
+      --card-bg: #ffffff;
+      --text: #202124;
+      --border: #dadce0;
+      --code-bg: #2d3748;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .header-card {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      margin-bottom: 30px;
+    }
+    .header-card h1 {
+      margin: 0 0 10px 0;
+      font-size: 26px;
+    }
+    .header-card h2 {
+      margin: 0 0 20px 0;
+      font-size: 18px;
+      font-weight: 400;
+      opacity: 0.9;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      padding-top: 15px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    .meta-item strong {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      opacity: 0.8;
+    }
+    .meta-item span {
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .section {
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      margin-bottom: 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    .section h3 {
+      margin-top: 0;
+      font-size: 20px;
+      color: #1a202c;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 10px;
+    }
+    .screenshot-card {
+      margin-bottom: 35px;
+      background: #fafafa;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .screenshot-info {
+      padding: 12px 20px;
+      background: #f1f3f4;
+      border-bottom: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .screenshot-info h4 {
+      margin: 0;
+      font-size: 15px;
+      color: #333;
+    }
+    .screenshot-img {
+      padding: 15px;
+      text-align: center;
+      background: #181818;
+    }
+    .screenshot-img img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+    .badge {
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      color: white;
+    }
+    .badge-get { background: #0cbb52; }
+    .badge-post { background: #ff6c37; }
+    .badge-put { background: #0265d2; }
+    .badge-delete { background: #eb2013; }
+    .badge-test { background: #673ab7; }
+
+    @media print {
+      body { background: white; padding: 0; }
+      .section, .header-card { box-shadow: none; border: 1px solid #ccc; page-break-inside: avoid; }
+      .screenshot-card { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header-card">
+      <h1>Aurora University - Department of Computer Science & Engineering</h1>
+      <h2>Lab 03: REST API, Query Parameters, Validation & Debugging</h2>
+      <div class="meta-grid">
+        <div class="meta-item">
+          <strong>Student Name</strong>
+          <span>Adepu Pranay Kumar</span>
+        </div>
+        <div class="meta-item">
+          <strong>Registration Number</strong>
+          <span>252U1R1002</span>
+        </div>
+        <div class="meta-item">
+          <strong>Section</strong>
+          <span>CSE-2A(S-15)</span>
+        </div>
+        <div class="meta-item">
+          <strong>Course</strong>
+          <span>B.Tech CSE (Backend Dev Fundamentals - Year II Term II)</span>
+        </div>
+        <div class="meta-item">
+          <strong>Faculty</strong>
+          <span>MR.sai shiva teja</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 1: Test Evidence Screenshots -->
+    <div class="section">
+      <h3>📸 Testing Evidence & Execution Screenshots</h3>
+      <p>The following visual evidence captures the automated test suite execution and each individual Postman API test scenario covering success and failure states.</p>
+
+      <!-- Terminal Suite -->
+      <div class="screenshot-card">
+        <div class="screenshot-info">
+          <h4>00. Automated Test Runner (All 31 Tests Passed)</h4>
+          <span class="badge badge-test">31 / 31 (100%)</span>
+        </div>
+        <div class="screenshot-img">
+          <img src="screenshots/12_terminal_test_suite_passed.svg" alt="Automated Test Suite">
+        </div>
+      </div>
+
+      <!-- 1. Root -->
+      <div class="screenshot-card">
+        <div class="screenshot-info">
+          <h4>01. GET / (Root Endpoint & Student Metadata)</h4>
+          <span class="badge badge-get">GET - 200 OK</span>
+        </div>
+        <div class="screenshot-img">
+          <img src="screenshots/01_root_endpoint.svg" alt="GET /">
+        </div>
+      </div>
+
+      <!-- 2. GET Default -->
+      <div class="screenshot-card">
+        <div class="screenshot-info">
+          <h4>02. GET /books (Default Pagination & Parameters)</h4>
+          <span class="badge badge-get">GET - 200 OK</span>
+        </div>
+        <div class="screenshot-img">
+          <img src="screenshots/02_get_books_default.svg" alt="GET /books Default">
+        </div>
+      </div>
+
+      <!-- 3. Search -->
+      <div class="screenshot-card">
+        <div class="screenshot-info">
+          <h4>03. GET /books?search_q=Clean (LIKE Partial Search)</h4>
+          <span class="badge badge-get">GET - 200 OK</span>
+        </div>
+        <div class="screenshot-img">
+          <img src="screenshots/03_get_books_search_q.svg" alt="GET /books?search_q=Clean">
+        </div>
+      </div>
+
+      <!-- 4. Sort -->
+      <div class="screenshot-card">
+        <div class="screenshot-info">
+          <h4>04. GET /books?order_by=price&order=DESC (Sorting)</h4>
+          <span class="badge badge-get">GET - 200 OK</span>
+        </div>
+        <div class="screenshot-img">
+          <img src="screenshots/04_get_books_sort_desc.svg" alt="GET /books Sort DESC">
+        </div>
+      </div>
+
+      <!-- 5. Price Range -->
+      <div class="screenshot-card">
+        <div class="screenshot-info">
+          <h4>05. GET /books?min_price=30&max_price=50 (BETWEEN Filter)</h4>
+          <span class="badge badge-get">GET - 200 OK</span>
+        </div>
+        <div class="screenshot-img">
+          <img src="screenshots/05_get_books_price_range.svg" alt="GET /books Price Filter">
+        </div>
+      </div>
+
+      <!-- 6. Query Param Validation -->
+      <div class="screenshot-card">
+        <div class="screenshot-info">
+          <h4>06. GET /books?order_by=invalid_column (Validation Failure)</h4>
+          <span class="badge badge-delete">400 Bad Request</span>
+        </div>
+        <div class="screenshot-img">
+          <img src="screenshots/06_get_books_invalid_order_by.svg" alt="Invalid order_by">
+        </div>
+      </div>
+
+      <!-- 7. 404 ID -->
+      <div class="screenshot-card">
+        <div class="screenshot-info">
+          <h4>07. GET /books/99999 (Resource Not Found)</h4>
+          <span class="badge badge-delete">404 Not Found</span>
+        </div>
+        <div class="screenshot-img">
+          <img src="screenshots/07_get_book_by_id_404.svg" alt="404 ID Not Found">
+        </div>
+      </div>
+
+      <!-- 8. POST Create -->
+      <div class="screenshot-card">
+        <div class="screenshot-info">
+          <h4>08. POST /books (Create New Book)</h4>
+          <span class="badge badge-post">POST - 201 Created</span>
+        </div>
+        <div class="screenshot-img">
+          <img src="screenshots/08_post_book_201_created.svg" alt="POST /books 201">
+        </div>
+      </div>
+
+      <!-- 9. POST Validation -->
+      <div class="screenshot-card">
+        <div class="screenshot-info">
+          <h4>09. POST /books Missing Title (Validation Failure)</h4>
+          <span class="badge badge-delete">400 Bad Request</span>
+        </div>
+        <div class="screenshot-img">
+          <img src="screenshots/09_post_book_validation_400.svg" alt="POST Validation 400">
+        </div>
+      </div>
+
+      <!-- 10. PUT Update -->
+      <div class="screenshot-card">
+        <div class="screenshot-info">
+          <h4>10. PUT /books/1 (Update Existing Book)</h4>
+          <span class="badge badge-put">PUT - 200 OK</span>
+        </div>
+        <div class="screenshot-img">
+          <img src="screenshots/10_put_book_update_200.svg" alt="PUT Update 200">
+        </div>
+      </div>
+
+      <!-- 11. DELETE -->
+      <div class="screenshot-card">
+        <div class="screenshot-info">
+          <h4>11. DELETE /books/11 (Delete Book by ID)</h4>
+          <span class="badge badge-delete">DELETE - 200 OK</span>
+        </div>
+        <div class="screenshot-img">
+          <img src="screenshots/11_delete_book_200.svg" alt="DELETE 200">
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Viva Q&A -->
+    <div class="section">
+      <h3>🎓 Viva Questions & Answers</h3>
+      <p><strong>1. Query parameter vs path parameter?</strong><br>
+      <em>Path Parameter:</em> Identifies a specific resource hierarchically within the URL (e.g., <code>/books/5</code> identifies book with ID 5).<br>
+      <em>Query Parameter:</em> Used to filter, sort, search, or paginate a collection without altering the identity of the resource (e.g., <code>/books?search_q=Clean&order_by=price</code>).</p>
+
+      <p><strong>2. What does stateless mean?</strong><br>
+      In REST architecture, statelessness means each client request must contain all the information necessary for the server to process it. The server does not store any client session context between requests, enabling high horizontal scalability and reliability.</p>
+
+      <p><strong>3. Which status code for bad input vs a missing record?</strong><br>
+      <em>Bad Input:</em> <code>400 Bad Request</code> (e.g., missing mandatory title/author, non-numeric price, or negative pagination limits).<br>
+      <em>Missing Record:</em> <code>404 Not Found</code> (e.g., querying or modifying an ID that does not exist in the database).</p>
+    </div>
+  </div>
+</body>
+</html>
