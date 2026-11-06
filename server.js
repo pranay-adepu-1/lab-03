@@ -76,12 +76,13 @@ async function startServer() {
   try {
     await db.initDatabase();
     
-    const server = app.listen(PORT, () => {
+    const HOST = '0.0.0.0';
+    const server = app.listen(PORT, HOST, () => {
       console.log(`====================================================`);
       console.log(` Aurora University - Backend Development Fundamentals `);
       console.log(` Student: Adepu Pranay Kumar (Reg: 252U1R1002) `);
       console.log(` Section: CSE-2A(S-15) | Faculty: MR.sai shiva teja `);
-      console.log(` Server is running on: http://localhost:${PORT} `);
+      console.log(` Server is running on: http://${HOST}:${PORT} `);
       console.log(`====================================================`);
     });
 

@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: lab-03-rest-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 22.12.0
+      - key: DB_FILE
+        value: database.sqlite
